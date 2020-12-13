@@ -1,0 +1,8 @@
+<title>Great!! Grandchild!</title>
+{% extends '/examples/grandchild.jinja' %}
+<!-----{ block content } prints after the Parent block
+       { block grandchild_content } prints after the Child block----->
+{% block greatgrandchild %}
+  <h3>Hello, I'm the Great Grandchild!</h3>
+  <p>I'm the greatest of them all!!!</p>
+{% endblock %}

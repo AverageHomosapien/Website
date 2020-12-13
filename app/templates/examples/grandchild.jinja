@@ -1,0 +1,12 @@
+{% extends '/examples/child.jinja' %}
+{% block grandchild_content %}
+  <h3>Start of Grandchild</h3>
+  <p>Hello, I am the grandchild of the parent, but have no parent.
+    I'm not super, and so I don't have a parent.</p>
+
+    {% block greatgrandchild %} {% endblock %}
+
+    {% block footer %} {{super()}}
+    <p> the footer only shows up with the super call!</p>
+    {% endblock %}
+{% endblock %}

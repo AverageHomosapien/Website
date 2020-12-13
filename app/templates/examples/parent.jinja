@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+  <title>Parent, child and grandchild</title>
+</head>
+<body>
+  <h3>Start of parent</h3>
+  <p>I am the parent of the child and the grandparent of the grandchild</p>
+
+  {% block content %} {% endblock %}
+
+  {% block footer %}
+  <br><br><br>
+    <p>Hellooooo, this is the footer! You'll be seeing me at your feet.</p>
+  {% endblock %}
+</body>
+</html>

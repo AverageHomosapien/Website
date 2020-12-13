@@ -1,0 +1,8 @@
+{% extends '/examples/parent.jinja' %}
+{% block content %}
+  <!---{{super()}} not sure if required--->
+  <h3>Start of child</h3>
+  <p>Hello, I am the child of the parent and the parent of the grandchild.</p>
+
+  {% block grandchild_content %}  {% endblock %}
+{% endblock %}

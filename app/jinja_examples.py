@@ -30,7 +30,24 @@ def dislike():
 
 @app.route('/joking/')
 def joking():
-    return render_template('examples/joking.jinja', names = ['Duncan', 'Donald', 'Mary', 'Sally', 'Susan', 'Francesca', 'Jenny', 'Joesph', 'Andrew'])
+    return render_template('/examples/joking.jinja', names = ['Duncan', 'Donald', 'Mary', 'Sally', 'Susan', 'Francesca', 'Jenny', 'Joesph', 'Andrew'])
+
+@app.route('/parent/')
+def parent():
+    return render_template('/examples/parent.jinja')
+
+@app.route('/child/')
+def child():
+    return render_template('/examples/child.jinja')
+
+@app.route('/grandchild/')
+def grandchild():
+    return render_template('/examples/grandchild.jinja')
+
+@app.route('/greatgrandchild/')
+@app.route('/great-grandchild/')
+def super_grandchild():
+    return render_template('/examples/greatgrandchild.jinja')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
